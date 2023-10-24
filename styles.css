@@ -5,20 +5,28 @@
     --text-color: #5A5A66;
     --background-color: #2A2B2E;
   }
-  
+
+  header {
+    height: 10vh;
+  }
+  main {
+    height: 90vh;
+  }
+
   body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: "Courier New", Courier, monospace;
     letter-spacing: -1px;
-    line-height: 1.2;
+    line-height: 1.0;
     white-space: pre-wrap;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 100px;
     font-weight: bold;
     text-align: center;
+    opacity: 0.5;
   }
 
   h4 {
@@ -85,18 +93,18 @@
   .about-content {
     display: flex;
     align-items: center; /* Vertically align items */
-    margin: 20px; /* Add margin as needed */
+    margin: 0px; /* Add margin as needed */
   }
   
   .about-image {
-    flex: 1; /* Take up 50% of the available width */
-    max-width: 50%; /* Limit the width of the image container */
+    flex: 2;
+    max-width: 25%; /* Limit the width of the image container */
     margin-right: 20px; /* Add margin between the image and text */
   }
   
   .about-image img {
     width: 100%; /* Make sure the image fills its container */
-    border-radius: 50%; /* Create a circular image if desired */
+    border-radius: 10%; /* Create a circular image if desired */
   }
   
   .about-text {
