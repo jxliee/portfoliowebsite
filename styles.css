@@ -29,14 +29,20 @@
     opacity: 0.5;
   }
 
+  h2 {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+  }
+
   h4 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
   }
 
   p {
-    font-size: 16px;
+    font-size: 30px;
     font-weight: normal;
     width: 50%;
   }
