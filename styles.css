@@ -82,6 +82,27 @@
     color: var(--background-color);
   }  
 
+  .about-content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    margin: 20px; /* Add margin as needed */
+  }
+  
+  .about-image {
+    flex: 1; /* Take up 50% of the available width */
+    max-width: 50%; /* Limit the width of the image container */
+    margin-right: 20px; /* Add margin between the image and text */
+  }
+  
+  .about-image img {
+    width: 100%; /* Make sure the image fills its container */
+    border-radius: 50%; /* Create a circular image if desired */
+  }
+  
+  .about-text {
+    flex: 1; /* Take up 50% of the available width */
+  }
+
   .social-icons {
     position: fixed;
     bottom: 20px;
@@ -114,5 +135,88 @@
     color: var(--background-color);
   }
   
-  /* Add more CSS rules as needed */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+    }
   
+    h4 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+      width: 80%;
+    }
+  
+    .navbar {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .navbar li {
+      margin-right: 5px;
+    }
+  
+    .navbar li a {
+      padding: 5px 7px;
+    }
+  
+    .social-icons {
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .social-icons li {
+      margin-right: 5px;
+    }
+  
+    .social-icons a {
+      width: 20px;
+      height: 20px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    h4 {
+      font-size: 14px;
+    }
+  
+    p {
+      font-size: 12px;
+      width: 90%;
+    }
+  
+    .navbar {
+      top: 5px;
+      right: 5px;
+    }
+  
+    .navbar li {
+      margin-right: 3px;
+    }
+  
+    .navbar li a {
+      padding: 3px 5px;
+    }
+  
+    .social-icons {
+      bottom: 5px;
+      right: 5px;
+    }
+  
+    .social-icons li {
+      margin-right: 3px;
+    }
+  
+    .social-icons a {
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+    }
+  }
