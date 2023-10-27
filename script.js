@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
       backSpeed: 25, // backspacing speed in milliseconds
       backDelay: 2000, // delay before starting to backspace
       startDelay: 1000, // delay before typing starts
-      loop: false, // loop the animation
+      loop: true, // loop the animation
+      showCursor: false, // show cursor
     };
     var typed = new Typed("#typewriter", options);
   });

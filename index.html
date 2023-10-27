@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
+  <title>Julie - software developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="./script.js"></script>
 </head>
 
@@ -17,7 +18,9 @@
   <header>
     <div class="header">
         <h1 id="typewriter"></h1>
-        <h4>i create things.</h4>
+        <div data-aos="fade-up">
+          <h4>i create things.</h4>
+        </div>
     </div>
     <nav class="navbar">
       <ul>
@@ -28,42 +31,94 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <div data-aos="fade-up" id="about">
+    <div data-aos="fade-up-right" id="about">
       <h2>About</h2>
-      <div class="about-content">
-        <!-- Your content for the About section goes here -->
-        <div class="about-image">
-          <img src="./images/profile.jpg" alt="profile">
+      <div class="about-container">
+        <div class="about">
+          <img src="./images/me.jpg" alt="profile" height="550px" width="550px">
         </div>
-        <div class="about-text">
-        <p>I'm currently a software development student pursuing a diploma in Information Technology - Programmer-Analyst at New Brunswick Community College. I am also a QA Analyst at HotSpot Parking in Fredericton, NB.
-          I also have an extensive background in sales and client success. I am passionate about creating and building things, and I am excited to continue to learn and grow in the technology industry.
-        </p>
+        <div class="about">
+          <p>I'm currently a software development student pursuing a diploma in Information Technology - Programmer-Analyst at New Brunswick Community College. I am also a QA Analyst at HotSpot Parking in Fredericton, NB. </p>
+          <p>I also have an extensive background in sales and client success. I am passionate about creating and building things, and I am excited to continue to learn and grow in the technology industry.</p>
+        </div>
+        <div class="about">
+          <h3>Skills</h3>
+          <p>Here are some of the skills and frameworks I am proficient in</p>
+          <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div data-aos="fade-up" id="work">
+    <div data-aos="fade-up-left" id="work">
       <h2>Work</h2>
-      <!-- Your content for the Work section goes here -->
+      <div class="project-container">
+        <div class="project">
+          <!-- Content for the first project goes here -->
+          <h3>Project 1</h3>
+          <p>Description of Project 1</p>
+        </div>
+        <div class="project">
+          <!-- Content for the second project goes here -->
+          <h3>Project 2</h3>
+          <p>Description of Project 2</p>
+        </div>
+        <div class="project">
+          <!-- Content for the third project goes here -->
+          <h3>Project 3</h3>
+          <p>Description of Project 3</p>
+        </div>
+      </div>
     </div>
 
-    <div data-aos="fade-up" id="experience">
+    <div data-aos="fade-up-right" id="experience">
       <h2>Experience</h2>
-      <!-- Your content for the Experience section goes here -->
+      <div class="experience-container">
+        <div class="experience">
+          <!-- Content for the first experience goes here -->
+          <h3>Experience 1</h3>
+          <p>Description of Experience 1</p>
+        </div>
+        <div class="experience">
+          <!-- Content for the second experience goes here -->
+          <h3>Experience 2</h3>
+          <p>Description of Experience 2</p>
+        </div>
+        <div class="experience">
+          <!-- Content for the third experience goes here -->
+          <h3>Experience 3</h3>
+          <p>Description of Experience 3</p>
+        </div>
+      </div>
     </div>
 
-    <div data-aos="fade-up" id="contact">
+    <div data-aos="fade-up-left" id="contact">
       <h2>Contact</h2>
+      <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Submit">
+      </form>
     </div>
 
     <div class="socials">
       <ul class="social-icons">
-        <li><a href="#"><i class="fab fa-github"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="www.github.com/jxliee"><i class="fab fa-github"></i></a></li>
+        <li><a href="www.linkedin.com/julie.l.smith1"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="www.instagram.com/jxlie"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:jxliesmith@gmail.com"><i class="fas fa-envelope"></i></a></li>
       </ul>
     </div>
   </main>
