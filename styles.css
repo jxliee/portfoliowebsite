@@ -26,6 +26,10 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
+p {
+  line-height: 2.0;
+}
+
 h1 {
   font-size: 80px;
   font-weight: bold;
@@ -163,10 +167,11 @@ p, ul, li, a {
 }
 
 .about {
-  width: 30%; /* Adjust the width as needed to make it smaller */
+  flex: 0 0 calc(30% - 20px); /* Each experience takes up a third of the screen width with spacing */
   background-color: var(--background-color);
   padding: 20px;
   margin: 10px;
+  box-shadow: 0px 0px 5px rgba(90, 90, 102, 1);
 }
 
 .about ul {
