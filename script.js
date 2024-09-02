@@ -3,18 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     AOS.init({
         duration: 1000,
         offset: 100,
-        });
-    //initialize typed.js
-    var options = {
-      strings: ["Hi, Julie here."],
-      typeSpeed: 100, // typing speed in milliseconds
-      backSpeed: 25, // backspacing speed in milliseconds
-      backDelay: 2000, // delay before starting to backspace
-      startDelay: 1000, // delay before typing starts
-      loop: true, // loop the animation
-      showCursor: true, // show cursor
-    };
-    var typed = new Typed("#typewriter", options);
+    });
 
     const navLinks = document.querySelectorAll(".navbar a");
 
@@ -26,4 +15,4 @@ document.addEventListener("DOMContentLoaded", function () {
         targetElement.scrollIntoView({ behavior: "smooth" });
       });
     });
-  });
+});

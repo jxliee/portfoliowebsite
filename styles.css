@@ -1,29 +1,103 @@
 :root {
-  --primary-color: #512d38ff;
-  --secondary-color: #b27092ff;
-  --accent-color: #f4bfdbff;
-  --text-color: #ffe9f3ff;
-  --background-color: #87baabff;
-}
-
-header {
-  height: 90vh;
-  margin-bottom: 200px;
-  margin-top: 30px;
-}
-main {
-  height: 70vh;
+  --primary-color: #4A4E69; /* Dark Gray */
+  --secondary-color: #9A8C98; /* Light Gray */
+  --accent-color: #C9ADA7; /* Beige */
+  --text-color: #F2E9E4; /* Light Beige */
+  --background-color: #22223B; /* Dark Background */
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Space Mono', monospace;
-  letter-spacing: -1px;
-  line-height: 1.0;
-  white-space: pre-wrap;
-  max-width: 100%; /* Set a maximum width to prevent horizontal scrolling */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Adjust as needed */
+}
+
+.navbar {
+  position: fixed;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: right; /* Center the navbar items */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space between navbar items */
+}
+
+.navbar li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.navbar li a:hover {
+  background-color: var(--accent-color);
+}
+
+.container {
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of columns */
+  justify-content: center; /* Center the content */
+}
+
+.col-md-8, .col-lg-6, .col-md-4 {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  margin: 10px; /* Space between columns */
+}
+
+.skills-list {
+  padding-left: 30px; /* Adjust the value for more or less indentation */
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: left; /* Align h2 elements to the left */
+  width: 100%; /* Ensure h2 takes full width for alignment */
+}
+
+h3, h4 {
+  color: var(--primary-color);
+  text-align: left;
+  font-size: 40px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center social icons */
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0 10px; /* Space between social icons */
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
 }
 
 p {
@@ -69,14 +143,6 @@ p, ul, li, a {
   line-height: 1.0;
 }
 
-.header {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .header::before {
   content: "";
   position: absolute;
@@ -98,84 +164,13 @@ p, ul, li, a {
   display: block;
 }
 
-.navbar {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar li {
-  margin-right: 10px;
-}
-
 .navbar li:last-child {
   margin-right: 0; /* Remove margin from the last list item */
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: var(--text-color);
-  padding: 5px 10px;
-  border-radius: 4px;
 }
 
 .navbar li a:hover {
   background-color: var(--primary-color);
   color: var(--background-color);
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-}
-
-.project {
-  flex: 0 0 calc(30% - 20px); /* Each project takes up a third of the screen width with spacing */
-  background-color: var(--background-color);
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 0px 0px 5px rgba(90, 90, 102, 1);
-}
-
-.experience-container {
-  display: flex;
-  justify-content: center;
-}
-
-.experience {
-  flex: 0 0 calc(30% - 20px); /* Each experience takes up a third of the screen width with spacing */
-  background-color: var(--background-color);
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 0px 0px 5px rgba(90, 90, 102, 1);
-}
-
-.experience ul {
-  padding-left: 20px;
-}
-
-.about-container {
-  display: flex;
-  justify-content: center;
-}
-
-.about {
-  flex: 0 0 calc(30% - 20px); /* Each experience takes up a third of the screen width with spacing */
-  background-color: var(--background-color);
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 0px 0px 5px rgba(90, 90, 102, 1);
-}
-
-.about ul {
-  padding-left: 20px;
 }
 
 .social-icons {
@@ -208,6 +203,11 @@ p, ul, li, a {
 .social-icons a:hover {
   background-color: var(--accent-color);
   color: var(--background-color);
+}
+
+.card img {
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 768px) {
@@ -271,5 +271,4 @@ p, ul, li, a {
     top: 5px;
     right: 5px;
   }
-
 }

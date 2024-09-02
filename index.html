@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Julie - software developer</title>
+  <title>Julie - Software Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
@@ -18,102 +18,138 @@
 </head>
 
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   <header>
-    <div class="header">
-        <h1 id="typewriter"></h1>
-        <div data-aos="fade-up">
-          <h4>i create things.</h4>
-        </div>
+    <div class="header text-center">
+      <h1 id="typewriter"></h1>
+      <div data-aos="fade-up" id="create-things" style="display: none;">
+        <h4>i create things.</h4>
+      </div>
     </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <div data-aos="fade-up-right" id="about">
-      <h2>// about</h2>
-      <div class="about-container">
-        <div class="about">
-          <img src="images/me.JPG" alt="profile" height="400px" width="400px">
-        </div>
-        <div class="about">
-          <h3>// who am i?</h3>
-          <p>I'm currently a software development student pursuing a diploma in Information Technology - Programmer-Analyst at New Brunswick Community College. I am also a QA Analyst at HotSpot Parking in Fredericton, NB. </p>
-          <p>I also have an extensive background in sales and client success. I am passionate about creating and building things, and I am excited to continue to learn and grow in the technology industry.</p>
-        </div>
-        <div class="about">
-          <h3>// skills</h3>
-          <p>Here are some of the skills and frameworks I am proficient in</p>
-          <ul>
-            <li>C#, Entity Framework</li>
-            <li>Javascript, React.js, Node.js</li>
-            <li>SQLServer, ADO.NET </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const typewriterText = "Hi, Julie here";
+      const typewriterElement = document.getElementById("typewriter");
+      const createThingsElement = document.getElementById("create-things");
+      let index = 0;
 
-    <div data-aos="fade-up-left" id="work">
-      <h2>// work</h2>
-      <div class="project-container">
-        <div class="project">
-          <!-- Content for the first project goes here -->
-          <h3>Project 1</h3>
-          <p>Description of Project 1</p>
-        </div>
-        <div class="project">
-          <!-- Content for the second project goes here -->
-          <h3>Project 2</h3>
-          <p>Description of Project 2</p>
-        </div>
-        <div class="project">
-          <!-- Content for the third project goes here -->
-          <h3>Project 3</h3>
-          <p>Description of Project 3</p>
-        </div>
-      </div>
-    </div>
+      function type() {
+        if (index < typewriterText.length) {
+          typewriterElement.textContent += typewriterText.charAt(index);
+          index++;
+          setTimeout(type, 100); // Adjust typing speed here
+        } else {
+          createThingsElement.style.display = "block"; // Show the next text
+        }
+      }
 
-    <div data-aos="fade-up-right" id="experience">
-      <h2>// experience</h2>
-      <div class="experience-container">
-        <div class="experience">
-          <!-- Content for the first experience goes here -->
-          <h3>QA Analyst - HotSpot Parking</h3>
-          <ul>
-            <li>During my time at HotSpot I worked on many projects, tested both web and mobile applications using a variety of techniques.</li>
-            <li>Learned to work in a team-managed environment using software such as Jira and Confluence.</li>
-            <li></li>
-          </ul>
+      type();
+    });
+  </script>
+
+  <main class="container">
+    <div data-aos="fade-up-right" id="about" class="my-5">
+        <div class="col-md-8 col-lg-6 text-center"> <!-- Centered and wider column -->
+          <h2>// about</h2>
         </div>
-        <div class="experience">
-          <!-- Content for the second experience goes here -->
-          <h3>Sales Associate - Eastlink Communications</h3>
-            <ul>
-            <li>Consistently exceeded monthly sales targets by 20% through active listening and personalized product recommendations.</li>
-            <li>Demonstrated in-depth product knowledge, explaining features and benefits of wireless devices to enhance customer understanding.</li>
+        
+        <div class="row my-4"> <!-- Added spacing between sections -->
+            <div class="col-md-6">
+              <img src="images/me.JPG" alt="profile" class="img-fluid" style="max-width: 400px;"> <!-- Max width of 400px -->
+            </div>
+            <div class="col-md-6">
+              <h3>who am i?</h3>
+              <br>
+              <p>I'm a full-stack developer at Arcadis IBI Group in Fredericton, NB. I also have an extensive background in sales and client success. I am passionate about creating and building things, and I am excited to continue to learn and grow in the technology industry.</p>
+              <br>
+            </div>
+        </div>
+
+        <div class="my-4"> <!-- Added spacing for skills section -->
+            <h3>skills</h3>
+            <br>
+            <p>Here are some of the skills and frameworks I am proficient in:</p>
+            <br>
+            <ul class="skills-list">
+              <li>C#, .NET, Entity Framework</li>
+              <li>Javascript, React.js, Node.js</li>
+              <li>SQLServer, MySQL, MongoDB</li>
+              <li>HTML, CSS, Bootstrap, Tailwind</li>
+              <li>PHP, CakePHP</li>
+              <li>AWS, Docker</li>
             </ul>
+            <br>
         </div>
-        <div class="experience">
-          <!-- Content for the third experience goes here -->
-          <h3>Sales Manager - Jump+ Apple Reseller</h3>
-          <ul>
-            <li>Leveraged my client acquisition and retention skills to drive sales and build lasting relationships with customers.</li>
-            <li>Demonstrated a deep understanding of Apple products and provided expert guidance to clients.</li>
-            <li>Proficient in utilizing Point of Sale (POS) systems for accurate and timely guest transactions.</li>
-            <li>Achieved and exceeded sales targets through effective communication of product benefits and features.</li>
-          </ul>
-        </div>
+    </div>
+
+    <div data-aos="fade-up-left" id="work" class="my-5">
+        <div class="col-md-8 col-lg-6 text-center"> <!-- Centered and wider column -->
+          <h2>// work</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Project 1</h3>
+              <p>Description of Project 1</p>
+            </div>
+            <div class="col-md-4">
+              <h3>Project 2</h3>
+              <p>Description of Project 2</p>
+            </div>
+            <div class="col-md-4">
+              <h3>Project 3</h3>
+              <p>Description of Project 3</p>
+            </div>
+          </div>
       </div>
     </div>
 
-    <div class="socials">
+    <div data-aos="fade-up-right" id="experience" class="my-5">
+        <div class="col-md-8 col-lg-6 text-center"> <!-- Centered and wider column -->
+          <h2>// experience</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>QA Analyst - HotSpot Parking</h3>
+              <ul>
+                <li>During my time at HotSpot I worked on many projects, tested both web and mobile applications using a variety of techniques.</li>
+                <li>Learned to work in a team-managed environment using software such as Jira and Confluence.</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Sales Associate - Eastlink Communications</h3>
+              <ul>
+                <li>Consistently exceeded monthly sales targets by 20% through active listening and personalized product recommendations.</li>
+                <li>Demonstrated in-depth product knowledge, explaining features and benefits of wireless devices to enhance customer understanding.</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Sales Manager - Jump+ Apple Reseller</h3>
+              <ul>
+                <li>Leveraged my client acquisition and retention skills to drive sales and build lasting relationships with customers.</li>
+                <li>Demonstrated a deep understanding of Apple products and provided expert guidance to clients.</li>
+                <li>Proficient in utilizing Point of Sale (POS) systems for accurate and timely guest transactions.</li>
+                <li>Achieved and exceeded sales targets through effective communication of product benefits and features.</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up-right" id="contact" class="my-5">
+        <div class="col-md-8 col-lg-6 text-center"> <!-- Centered and wider column -->
+          <h2>// contact</h2>
+          <p>If you would like to get in touch, feel free to reach out via email or connect with me on social media!</p>
+        </div>
+    </div>
+
+    <div class="social-icons">
       <ul class="social-icons">
         <li><a href="https://www.github.com/jxliee"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/julielsmith1"><i class="fab fa-linkedin"></i></a></li>
