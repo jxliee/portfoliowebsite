@@ -12,7 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
       backDelay: 2000, // delay before starting to backspace
       startDelay: 1000, // delay before typing starts
       loop: true, // loop the animation
-      showCursor: false, // show cursor
+      showCursor: true, // show cursor
     };
     var typed = new Typed("#typewriter", options);
+
+    const navLinks = document.querySelectorAll(".navbar a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      });
+    });
   });
